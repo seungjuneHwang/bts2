@@ -29,5 +29,11 @@ def movie():
     contact_list = crawling.get_movie()
     return render_template("movie.html", data=contact_list)
 
+@app.route('/melon')
+def melon():
+    contact_list = crawling.get_music()
+    return render_template("melon.html", data=contact_list)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
